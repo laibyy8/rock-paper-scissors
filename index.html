@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 class="sr-only">Rock Paper Scissors — Pick rock, paper, or scissors to play against the computer.</h2>
+
+<div class="game-wrap">
+  <header>
+    <div class="game-title">Rock Paper Scissors</div>
+    <div class="subtitle">Pick your weapon</div>
+  </header>
+
+  <div class="dots-deco">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="scoreboard">
+    <div class="score-block you">
+      <span class="who">You</span>
+      <span class="num" id="user-score">0</span>
+    </div>
+    <div class="score-block cpu">
+      <span class="who">CPU</span>
+      <span class="num" id="comp-score">0</span>
+    </div>
+  </div>
+
+  <div class="battle-row">
+    <div class="battle-slot">
+      <span class="label">Your pick</span>
+      <div class="battle-img" id="user-pick"></div>
+    </div>
+    <div class="vs-badge">VS</div>
+    <div class="battle-slot">
+      <span class="label">CPU pick</span>
+      <div class="battle-img" id="comp-pick"></div>
+    </div>
+  </div>
+
+  <div class="choices-grid">
+    <button class="choice-btn" data-choice="rock">
+      <div class="choice-icon" id="btn-rock"></div>
+      <span class="choice-label">Rock</span>
+    </button>
+    <button class="choice-btn" data-choice="scissors">
+      <div class="choice-icon" id="btn-scissors"></div>
+      <span class="choice-label">Scissors</span>
+    </button>
+    <button class="choice-btn" data-choice="paper">
+      <div class="choice-icon" id="btn-paper"></div>
+      <span class="choice-label">Paper</span>
+    </button>
+  </div>
+
+  <div class="msg-box">
+    <p id="msg">Choose your move to start!</p>
+  </div>
+
+  <div class="footer-row">
+    <span class="round-badge" id="round-label">Round 1</span>
+    <button class="reset-btn" onclick="resetGame()">&#8635; Reset</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
